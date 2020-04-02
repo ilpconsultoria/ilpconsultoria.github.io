@@ -11,23 +11,27 @@
     <section class="calculator">
         <h1>calculadora econômica</h1>
         <h2>Descubra o quanto você poderá economizar em impostos* ao contratar nosso serviços:</h2>
-        <p>*Valor estimativo. Para uma análise mais completa do seu perfil, entre em contato conosco!</p>
+        <p class="p-desktop">*Valor estimativo. Para uma análise mais completa do seu perfil, entre em contato conosco!</p>
         <section class="campos">
             <input list="tipo-empresa" name="tipo-empresa" class="tipo-empresa" placeholder="Tipo de empresa">
                 <datalist id="tipo-empresa">
-                <option value="ME">
+                    <option value="MEI">
+                    <option value="ME">
+                    <option value="EPP">
+                    <option value="LTDA">
+                    <option value="SA">
+                    <option value="SS">
+                    <option value="EIRELI">
+                    <option value="SLU">
                 </datalist>
             <div class="apenas">
                 <input type="text" name="fat-mensal" class="fat-mensal" placeholder="Faturamento mensal">
                 <p id="p-apenas">*apenas números</p>
             </div>
-            <div class="apenas">
-                <input type="text" name="salario-socio" class="salario-socio" placeholder="Salário do sócio">
-            <p id="p-apenas">*apenas números</p>
-            </div>
             <button class="btn-calcular">Calcular</button>
         </section>
         <h1 class="result">[ ]</h1>
+        <p class="p-mobile">*Valor estimativo. Para uma análise mais completa do seu perfil, entre em contato conosco!</p>
     </section>
     <script src="script.js"></script>
 </body>

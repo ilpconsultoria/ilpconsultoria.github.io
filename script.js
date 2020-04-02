@@ -8,10 +8,10 @@ const result = document.querySelector('.result');
 // let depois = faturamento * 0.095
 
 btnCalcular.addEventListener('click', () => {
-    if (tipoEmpresa.value === 'ME') {
+    // if (tipoEmpresa.value === 'ME') {
     let fat = parseFloat(faturamento.value * 0.175 - faturamento.value * 0.095);
     result.innerHTML = '[ R$ ' + Math.round(fat) + ',00 ]'
-    }
+    // }
 });
 
 
