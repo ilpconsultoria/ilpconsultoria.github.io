@@ -62,6 +62,19 @@ input {
     color: #26234e;
 }
 
+select {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+    width: 200px;
+    height: 36px;
+    margin-right: 10px;
+    padding-left: 10px;
+    font-size: 18px;
+    color: #26234e;
+    background-color: white;
+}
+
 .btn-calcular {
     width: 148px;
     height: 36px;
@@ -124,6 +137,12 @@ input {
 
     input {
         width: 285px;
+        margin-right: 0;
+        margin-top: 12px;
+    }
+
+    select {
+        width: 295px;
         margin-right: 0;
         margin-top: 12px;
     }
