@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ILP Consultoria</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="calculator">
+        <h1>calculadora econômica</h1>
+        <h2>Descubra o quanto você poderá economizar em impostos* ao contratar nosso serviços:</h2>
+        <p>*Valor estimativo. Para uma análise mais completa do seu perfil, entre em contato conosco!</p>
+        <section class="campos">
+            <input list="tipo-empresa" name="tipo-empresa" class="tipo-empresa" placeholder="Tipo de empresa">
+                <datalist id="tipo-empresa">
+                <option value="ME">
+                </datalist>
+            <div class="apenas">
+                <input type="text" name="fat-mensal" class="fat-mensal" placeholder="Faturamento mensal">
+                <p id="p-apenas">*apenas números</p>
+            </div>
+            <div class="apenas">
+                <input type="text" name="salario-socio" class="salario-socio" placeholder="Salário do sócio">
+            <p id="p-apenas">*apenas números</p>
+            </div>
+            <button class="btn-calcular">Calcular</button>
+        </section>
+        <h1 class="result">[ ]</h1>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
