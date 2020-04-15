@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    /* border: tomato 1px solid; */
 }
 
 html {
@@ -13,7 +12,7 @@ body {
     height: 100%;
     min-height: 100%;
     background-color: #c1dcd8;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     color: #26234e;
 }
 
@@ -126,7 +125,7 @@ select {
     .p-mobile {
         display: inline;
         font-size: 14px;
-        margin-top: 15px;
+        /* margin-top: 15px; */
         text-align: center;
     }
 

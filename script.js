@@ -1,17 +1,43 @@
-const faturamento = document.querySelector('.fat-mensal');
+let fat = document.querySelector('.fat');
 const btnCalcular = document.querySelector('.btn-calcular');
-const salarioSocio = document.querySelector('.salario-socio');
-const tipoEmpresa = document.querySelector('.tipo-empresa');
-const result = document.querySelector('.result');
-
-// let antes = faturamento * 0.175
-// let depois = faturamento * 0.095
+const resultPF = document.querySelector('.result-pf');
+const resultPJ = document.querySelector('.result-pj');
 
 btnCalcular.addEventListener('click', () => {
-    // if (tipoEmpresa.value === 'ME') {
-    let fat = parseFloat(faturamento.value * 0.175 - faturamento.value * 0.095);
-    result.innerHTML = '[ R$ ' + Math.round(fat) + ',00 ]'
-    // }
+    fat.value = parseFloat(fat.value.replace(',', '') && fat.value.replace('.', ''))
+    let fat5 = parseFloat( fat.value * 0.06 + fat.value * 0.09 )
+    let fat10 = parseFloat( fat.value * 0.06 + fat.value * 0.09 )
+    let fat15 = parseFloat( fat.value * 0.06 + fat.value * 0.1047 )
+    let fat20 = parseFloat( fat.value * 0.112 + fat.value * 0.073 + 780 )
+    let fat21 = parseFloat( fat.value * 0.1433 + fat.value * 0.015 + 671 )
+    let fatPF = parseFloat( fat.value * 0.275 + fat.value * 0.2 + 79.4 )
+
+    if (fat.value == 0) {
+        resultPF.innerHTML = `Pessoa Física [ R$ 0,00 ]`
+    }
+    
+    if (fat.value <= 5000) {
+        resultPJ.innerHTML = `Pessoa Jurídica [ R$ ${Math.round(fat5)},00 ]`
+    }
+
+    if (fat.value > 5000 && fat.value <= 10000) {
+        resultPJ.innerHTML = `Pessoa Jurídica [ R$ ${Math.round(fat10)},00 ]`
+    }
+
+    if (fat.value > 10000 && fat.value <= 15000) {
+        resultPJ.innerHTML = `Pessoa Jurídica [ R$ ${Math.round(fat15)},00 ]`
+    }
+
+    if (fat.value > 15000 && fat.value <= 20000) {
+        resultPJ.innerHTML = `Pessoa Jurídica [ R$ ${Math.round(fat20)},00 ]`
+    }
+
+    if (fat.value > 20000) {
+        resultPJ.innerHTML = `Pessoa Jurídica [ R$ ${Math.round(fat21)},00 ]`
+    }
+
+    resultPF.innerHTML = `Pessoa Física [ R$ ${Math.round(fatPF)},00 ]`
+
 });
 
-
+$('.dinheiro').mask('#.##0,00', {reverse: true});
