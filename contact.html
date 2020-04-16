@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ILP Consultoria</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="topnav">
+            <a href="index.html" class="active"><img src="/icons/logomini.svg" class="logo-mini" alt="logo ILP"></a>
+            <div id="myLinks" class="myLinks">
+                <a href="about.html">Sobre nós</a>
+                <a href="services.html">Serviços</a>
+                <a href="contact.html" style="color: #c1dcd8">Contato</a>
+            </div>
+            <a class="icon">
+              <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+        <nav class="nav-desktop">
+            <section class="content-nav-desktop">
+                <a href="index.html" class="logo-desktop"><img src="/icons/logomini.svg" class="logo-mini" alt="logo ILP"></a>
+                <div class="nav-links-desktop">
+                    <a class="btn" href="about.html">Sobre nós</a>
+                    <a class="btn" href="services.html">Serviços</a>
+                    <a class="btn selected-page" href="contact.html">Contato</a>
+                </div>
+            </section>
+        </nav>
+    </header>
+
+        <section class="container-blue" id="container-blue-contact">
+          <section class="content-values" id="content-value-contact">
+            <h1 class="h2-light">Informações <br> de contato</h1>
+            <p class="p-light" style="margin-top: 20px;">
+                <i class="fa fa-phone"></i>
+                (31)3657-0008 | 99946-2988
+            </p>
+            <p class="p-light" style="margin: 8px 0;">
+                <i class="fa fa-envelope"></i>
+                contato@ilpconsultoria.com.br
+            </p>
+            <p class="p-light">
+                <i class="fa fa-map-pin"></i>
+                Av. Barão Homem de Melo, 4500 <br> Salas 915/916 - Belo Horizonte, MG
+            </p>
+            </section>
+        </section>
+    </section>
+
+    <section class="green-desktop">
+        <section class="content-green-about">
+            <section class="container-green-about">
+                <section class="container-green-about-desktop">
+                    <h2 class="h2-green-about">fale conosco</h2>
+                    <p class="p-dark-desktop">Preencha o formulário abaixo e, em breve, entraremos em contato.</p>
+                    <form class="form" method="POST" action="email.php">
+                        <ol>
+                            <li>
+                                <input required class="lado-esquerdo" name="name" type="text" placeholder="Nome" id="nomeid">
+                            </li>
+                            <li>
+                                <input class="lado-direito" name="phone" placeholder="Telefone" >
+                            </li>
+                            <li>
+                                <input required class="contact_assunto" name="email" type="email" placeholder="Email" >
+                            </li>
+                            <li>
+                                <textarea class="contact_msg" name="text-area" type="text" placeholder="mensagem" ></textarea>
+                            </li>
+                            <li>
+                                <input class="btn-dark" name="" type="submit" placeholder="Enviar" onclick="Submit();" style="
+                                margin-top: 12px; box-shadow: 0 0 0 0; border: 0 none; outline: 0;">
+                            </li>
+                        </ol>
+                    </form>
+                </section>
+            </section>
+        </section>
+    </section>
+
+    <footer>
+        <section class="footer">
+            <p class="p-light">ILP Consultoria 2020 &copy;</p>
+            <article class="sociais">
+                <a href="https://www.facebook.com/ilp.consultoria/" target="blank">
+                    <img src="/icons/socialface.svg" class="icons-social" alt="logo facebook">
+                </a>
+                <a href="https://www.instagram.com/ilp.consultoria/" target="blank">
+                    <img src="/icons/socialinsta.svg" class="icons-social" alt="logo instagram">
+                </a>
+            </article>
+        </section>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
