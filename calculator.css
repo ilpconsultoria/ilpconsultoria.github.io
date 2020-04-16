@@ -1,3 +1,24 @@
+<<<<<<< HEAD:calculator.css
+=======
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    height: 100%;
+    min-height: 100%;
+    background-color: #c1dcd8;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #26234e;
+}
+
+>>>>>>> 7da58ecde1f14c4fee8aea65424c4b5a4ea7f854:style.css
 .calculator {
     align-items: center;
     display: flex;
@@ -107,6 +128,10 @@ select {
     .p-mobile {
         display: inline;
         font-size: 14px;
+<<<<<<< HEAD:calculator.css
+=======
+        /* margin-top: 15px; */
+>>>>>>> 7da58ecde1f14c4fee8aea65424c4b5a4ea7f854:style.css
         text-align: center;
     }
 
