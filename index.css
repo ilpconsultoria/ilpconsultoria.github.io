@@ -141,7 +141,7 @@ max-height: 100%;
 
 .banner-home {
 align-items: flex-end;
-background-image: url(/images/site-home.jp2);
+background-image: url(/images/site-home.jpg);
 background-position: top;
 background-repeat: no-repeat;
 background-size: cover;
@@ -153,7 +153,7 @@ width: 100%;
 
 .banner-about {
   align-items: flex-end;
-  background-image: url(/images/site-sobre.jp2);
+  background-image: url(/images/site-sobre.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -162,18 +162,6 @@ width: 100%;
   justify-content: center;
   width: 100%;
   }
-
-.banner-services {
-  align-items: flex-end;
-  background-image: url(/images/site-servicos.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  height: 395px;
-  justify-content: center;
-  width: 100%;
-}
 
 .content-banner-home {
 margin-bottom: 44px;
@@ -544,7 +532,7 @@ color: white;
 
 .banner-home {
   align-items: center;
-  background-image: url(/images/desktop-home.jp2);
+  background-image: url(/images/desktop-home.png);
   height: 768px;
 }
 
@@ -703,13 +691,7 @@ h4 {
 
 .banner-about {
   align-items: center;
-  background-image: url(/images/desktop-sobre.jp2);
-  height: 768px;
-}
-
-.banner-services {
-  align-items: center;
-  background-image: url(/images/desktop-serviços.png);
+  background-image: url(/images/desktop-sobre.png);
   height: 768px;
 }
 
