@@ -141,7 +141,7 @@ max-height: 100%;
 
 .banner-home {
 align-items: flex-end;
-background-image: url(/images/site-home.png);
+background-image: url(/images/site-home.jp2);
 background-position: top;
 background-repeat: no-repeat;
 background-size: cover;
@@ -153,7 +153,7 @@ width: 100%;
 
 .banner-about {
   align-items: flex-end;
-  background-image: url(/images/site-sobre.png);
+  background-image: url(/images/site-sobre.jp2);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -544,7 +544,7 @@ color: white;
 
 .banner-home {
   align-items: center;
-  background-image: url(/images/desktop-home.png);
+  background-image: url(/images/desktop-home.jp2);
   height: 768px;
 }
 
@@ -703,7 +703,7 @@ h4 {
 
 .banner-about {
   align-items: center;
-  background-image: url(/images/desktop-sobre.png);
+  background-image: url(/images/desktop-sobre.jp2);
   height: 768px;
 }
 
