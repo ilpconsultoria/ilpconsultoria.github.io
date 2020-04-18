@@ -18,45 +18,47 @@ icon.addEventListener('click', () => {
 })
 
 let fat = document.querySelector('.fat');
-const btnCalcular = document.querySelector('.btn-calcular');
-const resultPF = document.querySelector('.result-pf');
-const resultPJ = document.querySelector('.result-pj');
+let btnCalcular = document.querySelector('.btn-calcular');
+let resultPF = document.querySelector('.result-pf');
+let resultPJ = document.querySelector('.result-pj');
 
 btnCalcular.addEventListener('click', () => {
-    fat.value = parseFloat(fat.value.replace(',', '') && fat.value.replace('.', ''))
-    let fat5 = parseFloat( fat.value * 0.06 + fat.value * 0.09 )
-    let fat10 = parseFloat( fat.value * 0.06 + fat.value * 0.09 )
-    let fat15 = parseFloat( fat.value * 0.06 + fat.value * 0.1047 )
-    let fat20 = parseFloat( fat.value * 0.112 + fat.value * 0.073 + 780 )
-    let fat21 = parseFloat( fat.value * 0.1433 + fat.value * 0.015 + 671 )
-    let fatPF = parseFloat( fat.value * 0.275 + fat.value * 0.2 + 79.4 )
 
-    if (fat.value == 0) {
-        resultPF.innerHTML = `Pessoa Física [ R$ 0,00 ]`
-    }
+    fat.value = parseFloat(fat.value.replace(',', '') && fat.value.replace('.', ''))
+    let fat5 = Math.round( fat.value * 0.06 + fat.value * 0.09 )
+    let fat10 = Math.round( fat.value * 0.06 + fat.value * 0.09 )
+    let fat15 = Math.round( fat.value * 0.06 + fat.value * 0.1047 )
+    let fat20 = Math.round( fat.value * 0.112 + fat.value * 0.073 + 780 )
+    let fat21 = Math.round( fat.value * 0.1433 + fat.value * 0.015 + 671 )
+    let fatPF = Math.round( fat.value * 0.275 + fat.value * 0.2 + 79.4 )
+
+    const curFor = (n) => n.toFixed(2).replace('.', ',').replace(/(\d)(?=(\d{3})+\,)/g, "$1.");
     
     if (fat.value <= 5000) {
-        resultPJ.innerHTML = `Pessoa Jurídica [ R$ ${Math.round(fat5)},00 ]`
+        resultPJ.innerHTML = `Pessoa Jurídica [ R$ ${curFor(fat5)} ]`
     }
 
     if (fat.value > 5000 && fat.value <= 10000) {
-        resultPJ.innerHTML = `Pessoa Jurídica [ R$ ${Math.round(fat10)},00 ]`
+        resultPJ.innerHTML = `Pessoa Jurídica [ R$ ${curFor(fat10)} ]`
     }
 
     if (fat.value > 10000 && fat.value <= 15000) {
-        resultPJ.innerHTML = `Pessoa Jurídica [ R$ ${Math.round(fat15)},00 ]`
+        resultPJ.innerHTML = `Pessoa Jurídica [ R$ ${curFor(fat15)} ]`
     }
 
     if (fat.value > 15000 && fat.value <= 20000) {
-        resultPJ.innerHTML = `Pessoa Jurídica [ R$ ${Math.round(fat20)},00 ]`
+        resultPJ.innerHTML = `Pessoa Jurídica [ R$ ${curFor(fat20)} ]`
     }
 
     if (fat.value > 20000) {
-        resultPJ.innerHTML = `Pessoa Jurídica [ R$ ${Math.round(fat21)},00 ]`
+        resultPJ.innerHTML = `Pessoa Jurídica [ R$ ${curFor(fat21)} ]`
     }
 
-    resultPF.innerHTML = `Pessoa Física [ R$ ${Math.round(fatPF)},00 ]`
+    
 
-});
+      resultPF.innerHTML = `PESSOA FÍSICA [ R$ ${curFor(fatPF)} ]`
+    
+  });
 
-$('.dinheiro').mask('#.##0,00', {reverse: true});
+  $('.dinheiro').mask('#.##0,00', {reverse: true});
+  
