@@ -508,6 +508,7 @@ color: white;
 .nav-desktop {
   align-items: center;
   background-color: white;
+  box-shadow:  2px 4px 19px rgba(0, 0, 0, 0.27);
   color: #26234e;
   display: flex;
   height: 60px;
@@ -868,9 +869,9 @@ svg:hover {
 }
 
 .int-home {
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   text-align: left;
 }
 
