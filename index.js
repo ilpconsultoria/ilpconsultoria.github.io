@@ -17,6 +17,8 @@ icon.addEventListener('click', () => {
   }
 })
 
+window.onload = function() {
+
 let fat = document.querySelector('.fat');
 let btnCalcular = document.querySelector('.btn-calcular');
 let resultPF = document.querySelector('.result-pf');
@@ -25,13 +27,13 @@ let resultPJTotal = document.querySelector('.result-pj-total');
 
 const calculatorFat = () => {
   
-  fat.value = parseFloat(fat.value.replace(',', '') && fat.value.replace('.', ''))
-  let fat5 = Math.round( fat.value * 0.06 + fat.value * 0.09 )
-  let fat10 = Math.round( fat.value * 0.06 + fat.value * 0.09 )
-  let fat15 = Math.round( fat.value * 0.06 + fat.value * 0.1047 )
-  let fat20 = Math.round( fat.value * 0.112 + fat.value * 0.073 + 780 )
-  let fat21 = Math.round( fat.value * 0.1433 + fat.value * 0.015 + 671 )
-  let fatPF = Math.round( fat.value * 0.275 + fat.value * 0.2 + 79.4 )
+  fat.value = parseFloat(fat.value.replace(',', '') && fat.value.replace('.', ''));
+  let fat5 = Math.round( fat.value * 0.06 + fat.value * 0.09 );
+  let fat10 = Math.round( fat.value * 0.06 + fat.value * 0.09 );
+  let fat15 = Math.round( fat.value * 0.06 + fat.value * 0.1047 );
+  let fat20 = Math.round( fat.value * 0.112 + fat.value * 0.073 + 780 );
+  let fat21 = Math.round( fat.value * 0.1433 + fat.value * 0.015 + 671 );
+  let fatPF = Math.round( fat.value * 0.275 + fat.value * 0.2 + 79.4 );
   
   const repChar = (n) => n.toFixed(2).replace('.', ',').replace(/(\d)(?=(\d{3})+\,)/g, "$1.");
   
@@ -62,7 +64,7 @@ const calculatorFat = () => {
   
   resultPF.innerHTML = `[ R$ ${repChar(fatPF)} ]`
   
-  fat.value = ' ';
+  fat.value = null;
   
 };
 
@@ -73,6 +75,6 @@ document.addEventListener('keydown', (e) => {
   }
 })
 
+}
 
 $('.dinheiro').mask('#.##0,00', {reverse: true});
-  
