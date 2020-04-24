@@ -21,6 +21,7 @@ let fat = document.querySelector('.fat');
 let btnCalcular = document.querySelector('.btn-calcular');
 let resultPF = document.querySelector('.result-pf');
 let resultPJ = document.querySelector('.result-pj');
+let resultPJTotal = document.querySelector('.result-pj-total');
 
 const calculatorFat = () => {
   
@@ -35,26 +36,31 @@ const calculatorFat = () => {
   const repChar = (n) => n.toFixed(2).replace('.', ',').replace(/(\d)(?=(\d{3})+\,)/g, "$1.");
   
   if (fat.value <= 5000) {
-    resultPJ.innerHTML = `Pessoa Jurídica [ R$ ${repChar(fat5)} ]`
+    resultPJ.innerHTML = `[ R$ ${repChar(fat5)} ]`
+    resultPJTotal.innerHTML = `[ R$ ${repChar(fatPF - fat5)} ]`
   }
-
+  
   if (fat.value > 5000 && fat.value <= 10000) {
-    resultPJ.innerHTML = `Pessoa Jurídica [ R$ ${repChar(fat10)} ]`
+    resultPJ.innerHTML = `[ R$ ${repChar(fat10)} ]`
+    resultPJTotal.innerHTML = `[ R$ ${repChar(fatPF - fat10)} ]`
   }
   
   if (fat.value > 10000 && fat.value <= 15000) {
-    resultPJ.innerHTML = `Pessoa Jurídica [ R$ ${repChar(fat15)} ]`
+    resultPJ.innerHTML = `[ R$ ${repChar(fat15)} ]`
+    resultPJTotal.innerHTML = `[ R$ ${repChar(fatPF - fat15)} ]`
   }
   
   if (fat.value > 15000 && fat.value <= 20000) {
-    resultPJ.innerHTML = `Pessoa Jurídica [ R$ ${repChar(fat20)} ]`
+    resultPJ.innerHTML = `[ R$ ${repChar(fat20)} ]`
+    resultPJTotal.innerHTML = `[ R$ ${repChar(fatPF - fat20)} ]`
   }
   
   if (fat.value > 20000) {
-    resultPJ.innerHTML = `Pessoa Jurídica [ R$ ${repChar(fat21)} ]`
+    resultPJ.innerHTML = `[ R$ ${repChar(fat21)} ]`
+    resultPJTotal.innerHTML = `[ R$ ${repChar(fatPF - fat21)} ]`
   }
   
-  resultPF.innerHTML = `PESSOA FÍSICA [ R$ ${repChar(fatPF)} ]`
+  resultPF.innerHTML = `[ R$ ${repChar(fatPF)} ]`
   
   fat.value = ' ';
   

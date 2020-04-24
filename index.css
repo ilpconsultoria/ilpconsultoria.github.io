@@ -238,6 +238,7 @@ width: 100%;
 }
 
 #container-blue-contact {
+  background-image: url(/images/desktop-contato.png);
   padding-top: 55px;
 }
 
@@ -660,6 +661,8 @@ h4 {
   background-color: #c1dcd8;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .container-green-home {
@@ -826,24 +829,34 @@ svg:hover {
   align-items: flex-end;
   display: flex;
   flex-direction: row;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 .container-result-PFPJ {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
 }
 
 .result-PFPJ {
   align-items: flex-end;
   display: flex;
+  margin: 0 10px;
 }
 
 .calculator-input{
   align-items: flex-start;
   display: flex;
   flex-direction: column;
+}
+
+.blue-strip {
+  align-items: center;
+  background-color: #26234e;
+  display: flex;
+  height: 90px;
+  justify-content: center;
+  width: 100%;
 }
 
 }
@@ -856,7 +869,6 @@ svg:hover {
   
   .form {
     margin-bottom: 75px;
-    margin-top: 75px;
   }
   
   .content-banner-home {
