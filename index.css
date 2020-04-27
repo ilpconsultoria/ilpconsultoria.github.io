@@ -446,7 +446,6 @@ font-size: 12px;
 }
 .contact_submit{
   cursor: pointer;
-  color: #0FA36B;
   margin-top: 15px;
   text-align: center;
   width: 120px;
@@ -500,9 +499,19 @@ font-size: 12px;
   justify-content: center;
 }
 
+.container-green-about {
+  padding: 65px 0;
+}
+
 .form {
-  margin-bottom: 75px;
-  margin-top: 75px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.p-dark-desktop {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 }
