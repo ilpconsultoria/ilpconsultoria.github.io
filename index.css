@@ -42,7 +42,7 @@ font-size: 18px;
 }
 
 h4 {
-font-size: 12px;
+font-size: 14px;
 margin-bottom: 10px;
 text-transform: uppercase;
 }
@@ -318,16 +318,6 @@ text-align: center;
   text-align: center;
   }
 
-.container-white-about {
-  align-items: center;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  padding: 30px 0;
-  text-align: center;
-  }
-
 .p-dark {
 margin-bottom: 18px;
 margin-top: 24px;
@@ -391,6 +381,7 @@ display: none;
 
 .p-light {
 color: white;
+font-size: 12px;
 }
 
 #h1-banner-about {
@@ -465,6 +456,23 @@ color: white;
 }
 .contact_submit:hover{
   font-weight: 800;
+}
+
+.green-desktop {
+  display: none;
+}
+
+.container-white-about-desktop {
+  display: none;
+}
+
+.blue-strip-mobile {
+  align-items: center;
+  background-color: #26234e;
+  display: flex;
+  flex-direction: column;
+  height: 90px;
+  justify-content: center;
 }
 
 @media only screen and ( min-width: 650px ) and ( max-width: 959px ) {
@@ -751,11 +759,16 @@ svg:hover {
   margin: 35px 0;
 }
 
-.container-white-about {
-  flex-direction: row;
+.container-white-about-desktop {
+  align-items: center;
+  background-color: white;
+  display: flex;
   justify-content: space-around;
   padding: 55px 0;
   width: 88%;
+  margin: auto;
+  padding: 60px 0;
+  text-align: center;
 }
 
 .form{
@@ -873,6 +886,14 @@ svg:hover {
   display: flex;
   flex-direction: column;
   text-align: left;
+}
+
+.green-mobile {
+  display: none;
+}
+
+.container-white-about {
+  display: none;
 }
 
 }
