@@ -474,6 +474,10 @@ font-size: 12px;
   justify-content: center;
 }
 
+#container-blue-contact {
+  background-image: url(/images/site-contato.jpg);
+}
+
 @media only screen and ( min-width: 650px ) and ( max-width: 959px ) {
 
 .site-image{
