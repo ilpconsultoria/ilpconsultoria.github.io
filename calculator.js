@@ -9,41 +9,20 @@ window.onload = function() {
   const calculatorFat = () => {
     
     fat.value = parseFloat(fat.value.replace(',', '') && fat.value.replace('.', ''));
-    let fat05 = Math.round( fat.value * 0.06 + fat.value * 0.09 );
-    let fat10 = Math.round( fat.value * 0.06 + fat.value * 0.09 );
-    let fat15 = Math.round( fat.value * 0.06 + fat.value * 0.1047 );
-    let fat20 = Math.round( fat.value * 0.112 + fat.value * 0.073 + 780 );
-    let fat21 = Math.round( fat.value * 0.1433 + fat.value * 0.015 + 671 );
-    let fatPF = Math.round( fat.value * 0.275 + fat.value * 0.2 + 79.4 );
+    let fatPJ = Math.round( fat.value * 0.1433 );
+    let fatPF = Math.round( fat.value * 0.275 );
     
     const repChar = (n) => n.toFixed(2).replace('.', ',').replace(/(\d)(?=(\d{3})+\,)/g, "$1.");
     
-    if (fat.value <= 5000) {
-      resultPJ.innerHTML = `[ R$ ${repChar(fat05)} ]`
-      resultPJTotal.innerHTML = `[ R$ ${repChar(fatPF - fat05)} ]`
+    if (fatD.value < 5000) {
+      alert('Insira um valor acima de R$5.000')
     }
-    
-    if (fat.value > 5000 && fat.value <= 10000) {
-      resultPJ.innerHTML = `[ R$ ${repChar(fat10)} ]`
-      resultPJTotal.innerHTML = `[ R$ ${repChar(fatPF - fat10)} ]`
+
+    if (fat.value >= 5000) {
+      resultPJ.innerHTML = `[ R$ ${repChar(fatPJ)} ]`
+      resultPJTotal.innerHTML = `[ R$ ${repChar(fatPF - fatPJ)} ]`
+      resultPF.innerHTML = `[ R$ ${repChar(fatPF)} ]`
     }
-    
-    if (fat.value > 10000 && fat.value <= 15000) {
-      resultPJ.innerHTML = `[ R$ ${repChar(fat15)} ]`
-      resultPJTotal.innerHTML = `[ R$ ${repChar(fatPF - fat15)} ]`
-    }
-    
-    if (fat.value > 15000 && fat.value <= 20000) {
-      resultPJ.innerHTML = `[ R$ ${repChar(fat20)} ]`
-      resultPJTotal.innerHTML = `[ R$ ${repChar(fatPF - fat20)} ]`
-    }
-    
-    if (fat.value > 20000) {
-      resultPJ.innerHTML = `[ R$ ${repChar(fat21)} ]`
-      resultPJTotal.innerHTML = `[ R$ ${repChar(fatPF - fat21)} ]`
-    }
-    
-    resultPF.innerHTML = `[ R$ ${repChar(fatPF)} ]`
     
     fat.value = null;
     
@@ -65,41 +44,20 @@ window.onload = function() {
   const calculatorFatD = () => {
     
     fatD.value = parseFloat(fatD.value.replace(',', '') && fatD.value.replace('.', ''));
-    let fat05D = Math.round( fatD.value * 0.06 + fatD.value * 0.09 );
-    let fat10D = Math.round( fatD.value * 0.06 + fatD.value * 0.09 );
-    let fat15D = Math.round( fatD.value * 0.06 + fatD.value * 0.1047 );
-    let fat20D = Math.round( fatD.value * 0.112 + fatD.value * 0.073 + 780 );
-    let fat21D = Math.round( fatD.value * 0.1433 + fatD.value * 0.015 + 671 );
-    let fatPFD = Math.round( fatD.value * 0.275 + fatD.value * 0.2 + 79.4 );
+    let fatPJD = Math.round( fatD.value * 0.1433 );
+    let fatPFD = Math.round( fatD.value * 0.275 );
     
     const repChar = (n) => n.toFixed(2).replace('.', ',').replace(/(\d)(?=(\d{3})+\,)/g, "$1.");
     
-    if (fatD.value <= 5000) {
-      resultPJD.innerHTML = `[ R$ ${repChar(fat05D)} ]`
-      resultPJTotalD.innerHTML = `[ R$ ${repChar(fatPFD - fat05D)} ]`
+    if (fatD.value < 5000) {
+      alert('Insira um valor acima de R$5.000')
     }
-    
-    if (fatD.value > 5000 && fatD.value <= 10000) {
-      resultPJD.innerHTML = `[ R$ ${repChar(fat10D)} ]`
-      resultPJTotalD.innerHTML = `[ R$ ${repChar(fatPFD - fat10D)} ]`
-    }
-    
-    if (fatD.value > 10000 && fatD.value <= 15000) {
-      resultPJD.innerHTML = `[ R$ ${repChar(fat15D)} ]`
-      resultPJTotalD.innerHTML = `[ R$ ${repChar(fatPFD - fat15D)} ]`
-    }
-    
-    if (fatD.value > 15000 && fatD.value <= 20000) {
-      resultPJD.innerHTML = `[ R$ ${repChar(fat20D)} ]`
-      resultPJTotalD.innerHTML = `[ R$ ${repChar(fatPFD - fat20D)} ]`
-    }
-    
-    if (fatD.value > 20000) {
-      resultPJD.innerHTML = `[ R$ ${repChar(fat21D)} ]`
-      resultPJTotalD.innerHTML = `[ R$ ${repChar(fatPFD - fat21D)} ]`
-    }
-    
-    resultPFD.innerHTML = `[ R$ ${repChar(fatPFD)} ]`
+
+    if (fatD.value >= 5000) {
+      resultPJD.innerHTML = `[ R$ ${repChar(fatPJD)} ]`
+      resultPJTotalD.innerHTML = `[ R$ ${repChar(fatPFD - fatPJD)} ]`
+      resultPFD.innerHTML = `[ R$ ${repChar(fatPFD)} ]`
+    } 
     
     fatD.value = null;
     
