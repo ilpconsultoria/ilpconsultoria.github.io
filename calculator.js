@@ -14,7 +14,7 @@ window.onload = function() {
     
     const repChar = (n) => n.toFixed(2).replace('.', ',').replace(/(\d)(?=(\d{3})+\,)/g, "$1.");
     
-    if (fatD.value < 5000) {
+    if (fat.value < 5000) {
       alert('Insira um valor acima de R$5.000')
     }
 
