@@ -2,8 +2,6 @@ window.onload = function() {
 
   let fat = document.querySelector('.fat');
   let btnCalcular = document.querySelector('.btn-calcular');
-  let resultPF = document.querySelector('.result-pf');
-  let resultPJ = document.querySelector('.result-pj');
   let resultPJTotal = document.querySelector('.result-pj-total');
   
   const calculatorFat = () => {
@@ -19,9 +17,7 @@ window.onload = function() {
     }
 
     if (fat.value >= 5000) {
-      resultPJ.innerHTML = `[ R$ ${repChar(fatPJ)} ]`
       resultPJTotal.innerHTML = `[ R$ ${repChar(fatPF - fatPJ)} ]`
-      resultPF.innerHTML = `[ R$ ${repChar(fatPF)} ]`
     }
     
     fat.value = null;
@@ -37,8 +33,6 @@ window.onload = function() {
 
   let fatD = document.querySelector('.fat-d');
   let btnCalcularD = document.querySelector('.btn-calcular-d');
-  let resultPFD = document.querySelector('.result-pf-d');
-  let resultPJD = document.querySelector('.result-pj-d');
   let resultPJTotalD = document.querySelector('.result-pj-total-d');
   
   const calculatorFatD = () => {
@@ -54,9 +48,7 @@ window.onload = function() {
     }
 
     if (fatD.value >= 5000) {
-      resultPJD.innerHTML = `[ R$ ${repChar(fatPJD)} ]`
       resultPJTotalD.innerHTML = `[ R$ ${repChar(fatPFD - fatPJD)} ]`
-      resultPFD.innerHTML = `[ R$ ${repChar(fatPFD)} ]`
     } 
     
     fatD.value = null;
